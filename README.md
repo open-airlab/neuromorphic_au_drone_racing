@@ -15,7 +15,7 @@ For N-AU-DR-real train split, the .dat filenames identify the date, timestamp, n
 
 For N-AU-DR-real validation split, the .dat filenames identify the date, timestamp, environment lighting and whether gates have the same placement as in the training data. For example: 10-07-2021_13-58-01_1625918281_50light_gatemoved_td.dat
 
-For each .dat file there is a corresponding .npy file containing the annotated bounding boxes of gates. Each bounding box consist of `x`, abscissa of the top left corner in pixels, `y` ordinate of the top left corner in pixels, `w` width of the boxes in pixel, `h` height of the boxes in pixel, `ts` timestamp of the box in the sequence in microseconds, `class_id` 0 for gates.
+For each .dat file there is a corresponding .npy file containing the annotated bounding boxes of gates. Each bounding box consist of `x` abscissa of the top left corner in pixels, `y` ordinate of the top left corner in pixels, `w` width of the boxes in pixel, `h` height of the boxes in pixel, `ts` timestamp of the box in the sequence in microseconds, `class_id` 0 for gates.
 
 
 ## Usage
