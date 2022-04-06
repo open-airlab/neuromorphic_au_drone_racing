@@ -2,7 +2,7 @@
 This repository contains the public datasets and code for event camera perception for drone racing. The dataset is comprised of two parts: N-AU-DR-sim containing simulated data and N-AU-DR-real containing real event data.
 
 ## Download the dataset
-The entire dataset can be downloaded from: (link coming very soon!)
+The entire dataset can be downloaded from: [N-AU-DR](https://drive.google.com/drive/folders/1InoQCxsV5SEjSLCI9hsjjMPBX8-QMu_H?usp=sharing)
 (10GB compressed and 33GB uncompressed). 
 Each dataset is split into a training set and a validation set.
 
@@ -21,24 +21,30 @@ For each .dat file there is a corresponding .npy file containing the annotated b
 ## Dataset usage
 For visualizing and manipulating the dataset we recommend using the [prophesee-automotive-dataset-toolbox](https://github.com/prophesee-ai/prophesee-automotive-dataset-toolbox). Clone this repository and it then provides a variety of tools for visualizing the data with annotations.
 
-# event-based-gate-detection
+## Event-based gate detector with ROS
 
-This repository is largely based on the repository rpg_asynet published by uzh-rpg:
-https://github.com/uzh-rpg/rpg_asynet
-and much of the code is reused from their project. Full credit for this foundation goes to the authors 
-
-
-## Installation
-First set up an [Anaconda](https://www.anaconda.com/) environment:
-
-    conda create -n event-gate python=3.7  
-    conda activate event-gate
-
-Then clone the repository
-
-    git clone https://github.com/KristofferFogh04/event-based-gate-detection.git
-    cd event-based-gate-detection/
+### Requirements
+Tested on ROS Melodic + Ubuntu 18.04
+Event camera running ros driver rpg_dvs_ros: https://github.com/uzh-rpg/rpg_dvs_ros
+### Trained models
+We provided 3 trained models: our sparse_RNN and two baselines dense_VGG and sparse_VGG under the following [link](https://drive.google.com/drive/folders/17RMxHaaM6bpOd4dzEvmqZNyxy03sBUe0?usp=sharing)
+Download the respective model and put them into folder "trained_models" (currently empty)
+### Installation
     
-Executing develop.sh will install all dependencies and external libraries
-        
-    ./develop.sh
+Executing develop.sh will install all dependencies and external libraries (including Facebook's SparseConvNet):
+
+```
+cd ros/
+./develop.sh
+```
+
+### Usage
+- Launch package "event_preprocessor" for creating event histogram:
+
+```
+roslaunch event_preprocessor event_preprocessor.launch
+```
+- Then, launch detector: 
+```
+roslaunch event_detector_rt detector.launch
+```

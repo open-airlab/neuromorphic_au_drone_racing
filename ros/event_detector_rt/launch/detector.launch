@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- Autopilot -->
+  <node pkg="event_detector_rt" type="detector.py" name="GateDetector" output="screen">
+    <rosparam file="$(find event_detector_rt)/config/settings.yaml" />
+  </node>
+
+</launch>

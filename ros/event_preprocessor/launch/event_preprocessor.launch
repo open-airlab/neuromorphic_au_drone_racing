@@ -1,0 +1,8 @@
+<launch>
+  <!-- launch event preprocessor -->
+  <node pkg="event_preprocessor" type="event_preprocessor" name="event_preprocess_node" output="screen">
+    <param name="number_event_window" value="5000" />
+    <remap from="your_event_stream" to="/dvs/events"/>
+  </node>
+
+</launch>
