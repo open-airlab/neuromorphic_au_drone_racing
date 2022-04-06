@@ -2,7 +2,7 @@
 This repository contains the public datasets and code for event camera perception for drone racing. The dataset is comprised of two parts: N-AU-DR-sim containing simulated data and N-AU-DR-real containing real event data.
 
 ## Download the dataset
-The entire dataset can be downloaded from: (INSERT LINK)
+The entire dataset can be downloaded from: (link coming very soon!)
 (10GB compressed and 33GB uncompressed). 
 Each dataset is split into a training set and a validation set.
 
