@@ -1,5 +1,5 @@
 # neuromorphic_au_drone_racing
-This repository contains the public datasets of event camera perception for drone racing. The dataset is comprised of two parts: N-AU-DR-sim containing simulated data and N-AU-DR-real containing real event data.
+This repository contains the public datasets and code for event camera perception for drone racing. The dataset is comprised of two parts: N-AU-DR-sim containing simulated data and N-AU-DR-real containing real event data.
 
 ## Download the dataset
 The entire dataset can be downloaded from: (INSERT LINK)
@@ -18,5 +18,27 @@ For N-AU-DR-real validation split, the .dat filenames identify the date, timesta
 For each .dat file there is a corresponding .npy file containing the annotated bounding boxes of gates. Each bounding box consist of `x` abscissa of the top left corner in pixels, `y` ordinate of the top left corner in pixels, `w` width of the boxes in pixel, `h` height of the boxes in pixel, `ts` timestamp of the box in the sequence in microseconds, `class_id` 0 for gates.
 
 
-## Usage
+## Dataset usage
 For visualizing and manipulating the dataset we recommend using the [prophesee-automotive-dataset-toolbox](https://github.com/prophesee-ai/prophesee-automotive-dataset-toolbox). Clone this repository and it then provides a variety of tools for visualizing the data with annotations.
+
+# event-based-gate-detection
+
+This repository is largely based on the repository rpg_asynet published by uzh-rpg:
+https://github.com/uzh-rpg/rpg_asynet
+and much of the code is reused from their project. Full credit for this foundation goes to the authors 
+
+
+## Installation
+First set up an [Anaconda](https://www.anaconda.com/) environment:
+
+    conda create -n event-gate python=3.7  
+    conda activate event-gate
+
+Then clone the repository
+
+    git clone https://github.com/KristofferFogh04/event-based-gate-detection.git
+    cd event-based-gate-detection/
+    
+Executing develop.sh will install all dependencies and external libraries
+        
+    ./develop.sh
