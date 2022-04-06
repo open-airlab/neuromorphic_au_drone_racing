@@ -1,0 +1,55 @@
+dataset:
+  # 'NCaltech101' or 'NCaltech101_ObjectDetection', 'Prophesee', 'NCars', 'N_AU_DR'
+  name: 'N_AU_DR'
+  event_representation: 'histogram'  # ['histogram']
+  ncaltech101:
+    dataset_path: "/media/kristoffer/Elements/Datasets/NCaltech101"
+    # Single classes e.g. ['anchor', 'helicopter', 'Motorbikes'] or 'all' for all classes
+    object_classes: 'all'
+    height: 180
+    width: 240
+    nr_events_window: 50000
+  ncaltech101_objectdetection:
+    dataset_path: "/media/kristoffer/Elements/Datasets/NCaltech_object_det"
+    object_classes: 'all'
+    height: 180
+    width: 240
+    nr_events_window: 25000
+  prophesee:
+    dataset_path: "/media/kristoffer/Elements/Datasets/PropheseeG1"
+    #dataset_path: "data/PropheseeG1"
+    object_classes: 'all'
+    height: 240
+    width: 304
+    nr_events_window: 25000
+  n_au_dr:
+    dataset_path: # insert dataset path
+    test_dataset_path: # insert dataset path
+    object_classes: 'all'
+    height: 180
+    width: 240
+    nr_events_window: 10000
+    temporal_window: False
+    delta_t: 20000
+
+dir:
+  log: 'log/'
+model:
+  # ['fb_sparse_vgg', 'dense_vgg', 'fb_sparse_object_det', 'dense_object_det', 'sparse_RNN']
+  model_name: 'sparse_RNN' #'fb_sparse_object_det'
+
+optim:
+  batch_size: 1
+  init_lr: 1e-4
+  steps_lr: [500, 1000, 1500]
+  factor_lr: 0.1
+checkpoint:
+  resume_training: False
+  resume_file: ''
+  use_pretrained: True
+  pretrained_dense_vgg: ''
+  pretrained_sparse_vgg: #Insert path to saved weights .pth file
+hardware:
+  # num_cpu_workers: {-1: auto, 0: main thread, >0: ...}
+  num_cpu_workers: 0
+  gpu_device: 'cpu'  # [0 or 'cpu']

@@ -1,0 +1,65 @@
+{
+    "SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
+    "SettingsVersion": 1.2,
+    "SimMode": "Multirotor",
+    "ViewMode": "NoDisplay",
+    "ClockSpeed": 1.0,
+    "Vehicles": {
+        "PX4": {
+            "VehicleType": "PX4Multirotor",
+            "UseSerial": false,
+            "UseTcp": true,
+            "TcpPort": 4560,
+            "ControlPort": 14580,
+            "params": {
+                "NAV_RCL_ACT": 0,
+                "NAV_DLL_ACT": 0,
+                "LPE_LAT": 56.206180,
+                "LPE_LON": 10.187857,
+                "COM_OBL_ACT": 1
+            },
+            "Cameras": {
+                "cam": {
+                    "CaptureSettings": [
+                        {
+                            "PublishToRos": 0,
+                            "ImageType": 0,
+                            "Width": 240,
+                            "Height": 180,
+                            "FOV_Degrees": 90,
+                            "AutoExposureSpeed": 100,
+                            "AutoExposureBias": 0,
+                            "AutoExposureMaxBrightness": 1,
+                            "AutoExposureMinBrightness": 1,
+                            "MotionBlurAmount": 0,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "ImageType": 5,
+                            "Width": 240,
+                            "Height": 180,
+                            "FOV_Degrees": 90,
+                            "AutoExposureSpeed": 100,
+                            "AutoExposureBias": 0,
+                            "AutoExposureMaxBrightness": 1,
+                            "AutoExposureMinBrightness": 1,
+                            "MotionBlurAmount": 0,
+                            "TargetGamma": 1.5
+                        }
+                    ],
+                    "X": 0.4,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Roll": 0.0,
+                    "Yaw": 0.0
+                }
+            }   
+        }
+    },
+    "OriginGeopoint": {
+        "Latitude": 56.206180,
+        "Longitude": 10.187857,
+        "Altitude": 10
+    }
+}
