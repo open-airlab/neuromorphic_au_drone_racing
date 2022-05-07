@@ -1,4 +1,9 @@
+README
+
 # neuromorphic_au_drone_racing
+
+![event-navigate.gif](demos/event-navigate.gif)
+
 This repository contains the public datasets and code for event camera perception for drone racing. The dataset is comprised of two parts: N-AU-DR-sim containing simulated data and N-AU-DR-real containing real event data.
 
 Paper: [link](https://arxiv.org/abs/2204.02120)
